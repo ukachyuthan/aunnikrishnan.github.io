@@ -53,10 +53,14 @@
             border: 1px solid #ddd;
             background-color: #fff;
             border-radius: 5px;
+            display: flex; /* Use Flexbox to control layout */
+            align-items: center; /* Center vertically within the project box */
         }
 
         .project img {
-            max-width: 100%; /* Ensure images don't exceed container width */
+            max-width: 100px; /* Adjust the image size as needed */
+            margin-left: auto; /* Push image to the right side */
+            border: 1px solid #ddd; /* Optional border for the image */
         }
 
         /* Add more styles as needed */
@@ -82,16 +86,20 @@
 
             <!-- Project 1 -->
             <div class="project">
-                <h3><strong>Project Title 1</strong></h3>
-                <p>Description of Project 1.</p>
-                <img src="project1.jpg" alt="Project 1">
+                <div>
+                    <h3><strong>Project Title 1</strong></h3>
+                    <p>Description of Project 1.</p>
+                </div>
+                <img src="1552328526499.jpeg" alt="Project 1">
             </div>
 
             <!-- Project 2 -->
             <div class="project">
-                <h3><strong>Project Title 2</strong></h3>
-                <p>Description of Project 2.</p>
-                <img src="project2.jpg" alt="Project 2">
+                <div>
+                    <h3><strong>Project Title 2</strong></h3>
+                    <p>Description of Project 2.</p>
+                </div>
+                <img src="1552328526499.jpeg" alt="Project 2">
             </div>
 
             <!-- Add more projects as needed -->
