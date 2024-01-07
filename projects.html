@@ -54,13 +54,17 @@
             background-color: #fff;
             border-radius: 5px;
             display: flex; /* Use Flexbox to control layout */
+            justify-content: space-between; /* Distribute space between the text and image */
             align-items: center; /* Center vertically within the project box */
             min-width: 500px; /* Adjust the minimum width as needed */
         }
 
+        .project div {
+            width: 48%; /* Set the width of the text container to 48% */
+        }
+
         .project img {
-            max-width: 100px; /* Adjust the image size as needed */
-            margin-left: auto; /* Push image to the right side */
+            max-width: 48%; /* Set the width of the image to 48% */
             border: 1px solid #ddd; /* Optional border for the image */
         }
 
