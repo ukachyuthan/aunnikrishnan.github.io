@@ -54,18 +54,15 @@
             background-color: #fff;
             border-radius: 5px;
             display: flex; /* Use Flexbox to control layout */
-            justify-content: space-between; /* Distribute space between the text and image */
-            align-items: center; /* Center vertically within the project box */
+            flex-direction: column; /* Arrange items in a column */
+            align-items: center; /* Center items horizontally within the project box */
+            text-align: center; /* Center text within the project box */
             min-width: 500px; /* Adjust the minimum width as needed */
         }
 
-        .project div {
-            width: 48%; /* Set the width of the text container to 48% */
-        }
-
         .project img {
-            max-width: 48%; /* Set the width of the image to 48% */
-            border: 1px solid #ddd; /* Optional border for the image */
+            max-width: 100%; /* Set the image to take up the full width of the container */
+            margin-top: 10px; /* Add some top margin between text and image */
         }
 
         /* Add more styles as needed */
@@ -92,7 +89,7 @@
             <div class="project">
                 <div>
                     <h3><strong>Intuitive and Efficient Control Interfaces for Teleoperation</strong></h3>
-                    <p>Developed and compared various teleoperation control interfaces for a mobile bi-manual nursing robot (TRINA). The control interfaces were implmented on a gamepad, Phantom Omni and Vicon human motion capture system. Object localization for shared autonomy for pick and place was done using a  Mask-RCNN object detection system. A user study identified motion mapping interfaces improved operator performance and workload. The studies also identified precise motion and task-specific actions require robot assistance and interface augmentation.</p>
+                    <p>Developed and compared various teleoperation control interfaces for a mobile bi-manual nursing robot (TRINA). The control interfaces were implemented on a gamepad, Phantom Omni, and Vicon human motion capture system. Object localization for shared autonomy for pick and place was done using a Mask-RCNN object detection system. A user study identified motion mapping interfaces improved operator performance and workload. The studies also identified precise motion and task-specific actions require robot assistance and interface augmentation.</p>
                 </div>
                 <img src="project1.png" alt="Project 1">
             </div>
@@ -101,7 +98,7 @@
             <div class="project">
                 <div>
                     <h3><strong>Augmented Reality and Haptic Cues for Remote Manipulation Interfaces</strong></h3>
-                    <p>Developed a motion mapping interface for a Kinova Gen3 arm with an HTC Vive VR system. Different levels of autonomy were designed to assist the operator with a pick and place manipulation task to varying degrees. A vibro-tactile haptic interface and AR visual cues to give information about task state, obstacle environment, task sucesss, etc were also developed for the feedback interface.</p>
+                    <p>Developed a motion mapping interface for a Kinova Gen3 arm with an HTC Vive VR system. Different levels of autonomy were designed to assist the operator with a pick and place manipulation task to varying degrees. A vibro-tactile haptic interface and AR visual cues to give information about task state, obstacle environment, task success, etc., were also developed for the feedback interface.</p>
                 </div>
                 <img src="project2.png" alt="Project 2">
             </div>
@@ -109,15 +106,15 @@
             <div class="project">
                 <div>
                     <h3><strong>Gaze Based Intent Inference and Workload Estimation</strong></h3>
-                    <p>Implemented gaze adaptive visual interfaces for manipulation based on gaze motion detected by Tobii Nano screen tracker. A novel cognitive workload index based on gaze motion, gaze allocation and pupil based stress inferece was developed.</p>
+                    <p>Implemented gaze adaptive visual interfaces for manipulation based on gaze motion detected by Tobii Nano screen tracker. A novel cognitive workload index based on gaze motion, gaze allocation, and pupil-based stress inference was developed.</p>
                 </div>
-                <img src="gaze.png" alt="Project 3">
+                <img src="project3.png" alt="Project 3">
             </div>
 
             <div class="project">
                 <div>
                     <h3><strong>Reward Engineering for Autonomous Pick and Place Actions  </strong></h3>
-                    <p>Implemented a autonomouse robot pick and place police using DDPG with Hindisght Experience Replay in OpenAI gym. Developed several motion and distance based heuristics for reward engineering with the best reward achieving a 40% improvement on solution convergence compared to the OpenAI baseline.</p>
+                    <p>Implemented an autonomous robot pick and place police using DDPG with Hindsight Experience Replay in OpenAI gym. Developed several motion and distance-based heuristics for reward engineering with the best reward achieving a 40% improvement in solution convergence compared to the OpenAI baseline.</p>
                 </div>
                 <img src="Results.gif" alt="Project 4">
             </div>
