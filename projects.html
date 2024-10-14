@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Projects</title>
+    <title>Achyuthan's Projects</title>
     <style>
         /* Define your custom styles here */
         body {
@@ -61,11 +61,26 @@
         }
 
         .project img {
-            max-width: 100%; /* Set the image to take up the full width of the container */
+            width: 100%; /* Ensure the image fits the container */
+            max-height: 300px; /* Cap the image height */
+            object-fit: contain; /* Maintain aspect ratio */
             margin-top: 10px; /* Add some top margin between text and image */
         }
 
-        /* Add more styles as needed */
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .project {
+                min-width: 100%; /* Ensure project boxes fit smaller screens */
+                padding: 15px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #a94442;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -75,9 +90,9 @@
     </header>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li><a href="/" aria-label="Home Page">Home</a></li>
+            <li><a href="projects.html" aria-label="Projects Page">Projects</a></li>
+            <li><a href="publications.html" aria-label="Publications Page">Publications</a></li>
         </ul>
     </nav>
     <main>
@@ -86,39 +101,49 @@
             <h1>My Projects</h1>
 
             <!-- Project 1 -->
-            <div class="project">
+            <article class="project">
                 <div>
-                    <h3><strong>Intuitive and Efficient Control Interfaces for Teleoperation</strong></h3>
-                    <p>Developed and compared various teleoperation control interfaces for a mobile bi-manual nursing robot (TRINA). The control interfaces were implemented on a gamepad, Phantom Omni, and Vicon human motion capture system. Object localization for shared autonomy for pick and place was done using a Mask-RCNN object detection system. A user study identified motion mapping interfaces improved operator performance and workload. The studies also identified precise motion and task-specific actions require robot assistance and interface augmentation. The work done in this project helped identify beneficial teleoperation control ideologies that can be extended to other remote manipulation and teloperation systems.</p>
+                    <h3><strong>User-based Optimization of Assistance Availability for Bi-manual Teleoperation</strong></h3>
+                    <p>Used the operator's physical workload and control motions to optimize the availability of assistances like scaled motion for precise control and tremor filtering for seamless orientation control of robot arms teleoperated via motion mapping for bi-manual tasks. Compared against other contemporary environment based triggers for assistances this user-based assistance trigger improved teleoperation experience by reducing task completion times by 11% and physical workload by 28%.</p>
                 </div>
-                <img src="project1.png" alt="Project 1">
-            </div>
+                <img src="bimual.gif" alt="User-based Optimization Project Image">
+            </article>
 
             <!-- Project 2 -->
-            <div class="project">
+            <article class="project">
+                <div>
+                    <h3><strong>Intuitive and Efficient Control Interfaces for Teleoperation</strong></h3>
+                    <p>Developed and compared various teleoperation control interfaces for a mobile bi-manual nursing robot (TRINA). The control interfaces were implemented on a gamepad, Phantom Omni, and Vicon human motion capture system. Object localization for shared autonomy for pick and place was done using a Mask-RCNN object detection system. A user study identified motion mapping interfaces improved operator performance and workload. The studies also identified precise motion and task-specific actions require robot assistance and interface augmentation. The work done in this project helped identify beneficial teleoperation control ideologies that can be extended to other remote manipulation and teleoperation systems.</p>
+                </div>
+                <img src="project1.png" alt="Control Interfaces Project Image">
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project">
                 <div>
                     <h3><strong>Augmented Reality and Haptic Cues for Remote Manipulation Interfaces</strong></h3>
                     <p>Developed a motion mapping interface for a Kinova Gen3 arm with an HTC Vive VR system. Different levels of autonomy were designed to assist the operator with a pick and place manipulation task to varying degrees. A vibro-tactile haptic interface and AR visual cues to give information about task state, obstacle environment, task success, etc., were also developed for the feedback interface. Identified a dictionary of AR cues that can be used to determine based on the level of autonomy the type of visual interface the participant might likely prefer.</p>
                 </div>
-                <img src="project2.png" alt="Project 2">
-            </div>
+                <img src="project2.png" alt="Augmented Reality Project Image">
+            </article>
 
-            <div class="project">
+            <!-- Project 4 -->
+            <article class="project">
                 <div>
-                    <h3><strong>Gaze Based Intent Inference and Workload Estimation</strong></h3>
+                    <h3><strong>Gaze-based Intent Inference and Workload Estimation</strong></h3>
                     <p>Implemented gaze adaptive visual interfaces for manipulation based on gaze motion detected by Tobii Nano screen tracker. A novel cognitive workload index based on gaze motion, gaze allocation, and pupil-based stress inference was developed. Cognitive workload due to stress based on pupil diameter, due to interface complexity identified through gaze motion and workload due to gaze fixations to determine processing workload were implemented to have an online estimation of the operator's cognitive preferences and efforts.</p>
                 </div>
-                <img src="gaze.png" alt="Project 3">
-            </div>
+                <img src="gaze.png" alt="Gaze-based Intent Inference Project Image">
+            </article>
 
-            <div class="project">
+            <!-- Project 5 -->
+            <article class="project">
                 <div>
-                    <h3><strong>Reward Engineering for Autonomous Pick and Place Actions  </strong></h3>
-                    <p>Implemented an autonomous robot pick and place police using DDPG with Hindsight Experience Replay in OpenAI gym. Developed several motion and distance-based heuristics for reward engineering with the best reward achieving a 40% improvement in solution convergence compared to the OpenAI baseline. This type of reward engineering methodolgy can be used to design future models for various tasks that require specialized motions in their autonomous robotic arm motions.</p>
+                    <h3><strong>Reward Engineering for Autonomous Pick and Place Actions</strong></h3>
+                    <p>Implemented an autonomous robot pick and place policy using DDPG with Hindsight Experience Replay in OpenAI gym. Developed several motion and distance-based heuristics for reward engineering with the best reward achieving a 40% improvement in solution convergence compared to the OpenAI baseline. This type of reward engineering methodology can be used to design future models for various tasks that require specialized motions in their autonomous robotic arm motions.</p>
                 </div>
-                <img src="Results.gif" alt="Project 4">
-            </div>
-            <!-- Add more projects as needed -->
+                <img src="Results.gif" alt="Reward Engineering Project Image">
+            </article>
         </section>
     </main>
     <footer>
